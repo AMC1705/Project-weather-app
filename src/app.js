@@ -68,7 +68,7 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "b6b68e360de400f75fc176cd7c3f4db6";
+  let apiKey = "2daf65f0cdaa917f11026e8a128ce271";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -100,7 +100,7 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  let apiKey = "b6b68e360de400f75fc176cd7c3f4d";
+  let apiKey = "2daf65f0cdaa917f11026e8a128ce271";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -115,4 +115,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Luxembourg");
-displayForecast();
